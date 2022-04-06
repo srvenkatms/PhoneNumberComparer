@@ -26,7 +26,7 @@ namespace Solve
             if(string.IsNullOrEmpty(phone1) || string.IsNullOrEmpty(phone2))
             {
                 responseMessage = " Either phone1 or phone 2 is empty";
-                return new OkObjectResult(responseMessage);
+                return new BadRequestObjectResult(responseMessage);
             }
            
             bool result = Helper.CheckSequence(phone1,phone2);
